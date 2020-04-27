@@ -12,8 +12,10 @@ An encoder decoder model is fed with these vectors and trained to model the empa
 ### Steps to run the model:
 
 1) Download the glove model from [here](https://archive.org/download/glove.6B.50d-300d/glove.6B.50d.txt)
-2) Change all the paths provided in utils/constants.py to the paths in your local system - For example) Glove model path is glove_model_path
-3) Run train_model.py in train\train_model.py
+2) Change all the paths provided in utils/constants.py to the paths in your local system - For example) glove_model_path variable in the file needs to be changed to the path of the downloaded file above
+3) Run save_glove_vectors.py in glove_emb/
+  *    *python save_glove_vectors.py*
+4) Run train_model.py in train/
    *   *python train_model.py*
       
 ### Steps to Predict the Model:
@@ -31,4 +33,5 @@ An encoder decoder model is fed with these vectors and trained to model the empa
 ### Future Work
 1) Create more data and use it for training the model
 2) Get semantic similar sentences to the training data to increase the training data points
-2) Use BERT embeddings and train the model
+3) Use BERT embeddings and train the model
+4) Expand vocabulary of the model since it uses only the words in training as the vocab. (Bert Model can help with this)
