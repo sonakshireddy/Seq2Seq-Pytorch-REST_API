@@ -22,8 +22,8 @@ Currently, implemented a Bidirectional GRU model at encoder and a GRU model with
       
 ### Steps to Predict the Model:
 
-1) Run the apps.py file - a web application interface will start 
- Replace {sentence} with a sentence to predict and run the following:
+1) Run the apps.py file - a web application interface will start
+2) Replace {sentence} with a sentence to predict and run the following:
   *  *http://127.0.0.1:8080/predict_sent/{sentence}* 
 
 
