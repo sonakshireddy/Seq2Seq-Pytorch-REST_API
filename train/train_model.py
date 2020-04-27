@@ -163,5 +163,4 @@ if __name__ == '__main__':
     encoder1 = EncoderRNN(weight_matrix, hidden_size)
     attn_decoder1 = AttnDecoderRNN(hidden_size, vocab_dict.n_words, weight_matrix=weight_matrix, dropout_p=0.1)
 
-    train_iters(encoder1, attn_decoder1, 70, print_every=10)
-    evaluateRandomly(encoder1, attn_decoder1)
+    train_iters(encoder1, attn_decoder1, 750000, print_every=10000)
