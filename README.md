@@ -1,6 +1,6 @@
 # Seq2Seq Learning using Pytorch and implementing a REST API to predict the model's results
 
-- The project's inputs are questions and answers given by mental health service providers to train a sequence to sequence model and predict the answer given by the model
+- The project's inputs are questions and answers given by mental health service providers to train a sequence to sequence model and predict the answer given by the model (Data is available [https://github.com/nbertagnolli/counsel-chat/tree/master/data](here))
 - The word vectors for the inputs are taken from glove embeddings (transfer learninng of pretrained model)
 - The model predictions are bad due to the limited number of training data points
 - This project shows how to structure a REST API for a trained pytorch model and use it to predict outputs at realtime.
