@@ -1,15 +1,18 @@
-# NlpEmpatheticResponse
-Providing an empathetic response to a question using sequence to sequence models
+# Seq2Seq Learning using Pytorch and implementing a REST API to predict the model's results
 
-This project takes questions and responses given by mental health service providers to train a sequence to sequence model that returns an empathetic response to a question or statement provided by the user.
+- The project's inputs are questions and answers given by mental health service providers to train a sequence to sequence model and predict the answer given by the model (Data is available [here](https://github.com/nbertagnolli/counsel-chat/tree/master/data))
+- The word vectors for the inputs are taken from glove embeddings (transfer learninng of pretrained model)
+- The model predictions are bad due to the limited number of training data points
+- This project shows how to structure a REST API for a trained pytorch model and use it to predict outputs at realtime.
 
-The initial part of the project is data cleaning and filtering of the points that can be useful for this model
+### Workflow of the model training
+* The initial part of the project is data cleaning and filtering of the points that can be useful for this model
 
-These data points are then converted into a vocabulary to retrieve pretrained word vectors (Glove vectors are used in this case)
+* These data points are then converted into a vocabulary to retrieve pretrained word vectors (Glove vectors are used in this case)
 
-An encoder decoder model is fed with these vectors and trained to model the empathetic responses from the questions provided by the user.
+* An encoder decoder model is fed with these vectors and trained to model the responses of the questions provided by the user
 
-Currently, implemented a Bidirectional GRU model at encoder and a GRU model with attention at decoder
+* Implemented a Bidirectional GRU model at encoder and a GRU model with attention at decoder
 
 ### Steps to run the model:
 
@@ -26,12 +29,6 @@ Currently, implemented a Bidirectional GRU model at encoder and a GRU model with
 2) Replace {sentence} with a sentence to predict and run the following:
   *  *http://127.0.0.1:8080/predict_sent/{sentence}* 
 
-
-### Challenges with this project:
-1) Very less data to model
-2) Embeddings for this model- which embeddings to use for training
-3) The model parameters and architecture for this particular kind of model
-4) Model is not able to learn long sentences- model architecture needs to be changed
 
 ### Future Work
 1) Create more data and use it for training the model
