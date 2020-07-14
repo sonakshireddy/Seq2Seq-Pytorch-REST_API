@@ -30,17 +30,6 @@ class CreateDict:
         else:
             self.word2count[word] += 1
 
-
-eng_prefixes = (
-    "i am ", "i m ",
-    "he is", "he s ",
-    "she is", "she s ",
-    "you are", "you re ",
-    "we are", "we re ",
-    "they are", "they re "
-)
-
-
 def filterPair(p):
     return len(p[0].split(' ')) < MAX_LENGTH and \
         len(p[1].split(' ')) < MAX_LENGTH
@@ -91,13 +80,5 @@ def prepare_data(ques, ans):
     # print(input_ques.name, input_ques.n_words)
     # print(output_ans.name, output_ans.n_words)
     return vocab_dict, pairs
-
-
-# with open('ques_ans.pickle', 'rb') as handle:
-#     b = pickle.load(handle)
-# question_desc = list(b['question'])
-# answer_target = list(b['answer'])
-# vocabd, pairs = prepareData(question_desc, answer_target)
-# print(list(vocabd.word2index.keys()))
 
 
